@@ -116,7 +116,7 @@ export function WaitlistForm({ onSubmit }: WaitlistFormProps = {}) {
     return ""
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
     // Validate all fields
@@ -136,12 +136,37 @@ export function WaitlistForm({ onSubmit }: WaitlistFormProps = {}) {
       return
     }
     
-    // Here you would typically send the data to your backend
-    console.log("Form submitted:", formData)
-    localStorage.setItem("skillvita_form_submitted", "true")
-    localStorage.setItem("skillvita_user_data", JSON.stringify(formData))
-    setSubmitted(true)
-    onSubmit?.()
+    // Post to backend
+    try {
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5002'
+      const response = await fetch(`${backendUrl}/skillvita/waitlist`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          number: formData.number,
+        }),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        console.log("Form submitted successfully:", result)
+        localStorage.setItem("skillvita_form_submitted", "true")
+        localStorage.setItem("skillvita_user_data", JSON.stringify(formData))
+        setSubmitted(true)
+        onSubmit?.()
+      } else {
+        console.error('Failed to submit form:', result)
+        alert('Failed to submit form. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('Error submitting form. Please try again.')
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
