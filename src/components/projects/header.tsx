@@ -14,7 +14,7 @@ export default function Header({
   const project_type = params?.project_type;
 
   const mainRouteData = {
-    title: "Are you a final-year student ready to build next-level projects?",
+    title: "Are you ready to build next-level projects?",
     description:
       "Yes! You are in the right place! Tackle real-world challenges, boost your portfolio, and gain hands-on experience with emerging tech.",
   };

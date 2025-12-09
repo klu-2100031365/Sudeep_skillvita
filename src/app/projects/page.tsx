@@ -65,7 +65,7 @@ export default function Projects() {
     const mapped = PROJECTS.map<Project>((p) => ({
       _id: p.id,
       title: p.name,
-      category: "Final Year",
+      category: "Projects",
       difficulty: "Intermediate",
       objective: p.description,
       skill: p.skills,
