@@ -6,7 +6,10 @@ const nextConfig: NextConfig = {
       "coursevita-storate.s3.ap-south-1.amazonaws.com",
       "coursevita-main-site.s3.eu-north-1.amazonaws.com",
       "res.cloudinary.com",
-      "coursevita.com"
+      "coursevita.com",
+      "images.unsplash.com",
+      "randomuser.me",
+      "placehold.co"
     ],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],

@@ -35,6 +35,7 @@ const Courses: React.FC = () => {
     if (!emblaApi) return;
     emblaApi.on("select", updateScrollState);
     updateScrollState(); // Initial update
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [emblaApi]);
 
   return (

@@ -320,12 +320,13 @@ export default function Tips() {
       }
     );
 
-    stepRefs.current.forEach((ref) => {
+    const currentRefs = stepRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      stepRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };

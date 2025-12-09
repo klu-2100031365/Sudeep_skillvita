@@ -210,6 +210,7 @@ const DatePicker: React.FC<DatePickerProps> = ({ onDateSelect, selectedDate }): 
       // If no date is selected, set to today or next available day
       setActiveDate(currentDate);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Close dropdown when clicking outside
