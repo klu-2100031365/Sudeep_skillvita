@@ -3,10 +3,10 @@ import { useRef } from "react";
 import { PartnershipHero } from "@/components/CollegePartnership/PartnershipHero";
 import WhyPlacementSection from "../student-placements/(components)/WhyPlacementSection";
 import StudentOpportunities from "../student-placements/(components)/StudentOpportunities";
-import SkillingJourney from "../student-placements/(components)/SkillingJourney";
-import StudentOutcomes from "../student-placements/(components)/StudentOutcomes";
-import UpskillDomains from "../student-placements/(components)/UpskillDomains";
-import PortfolioSection from "../student-placements/(components)/PortfolioSection";
+import { WhyShiftMattersSection } from "@/components/CollegePartnership/WhyShiftMattersSection";
+import { HowStudentsReady } from "@/components/CollegePartnership/HowStudentsReady";
+import { InstitutionOutcomes } from "@/components/CollegePartnership/InstitutionOutcomes";
+import { PartnershipDelivers } from "@/components/CollegePartnership/PartnershipDelivers";
 import Testimonials from "@/components/landing-page/Testimonials";
 import Last from "@/app/mock-interviews/(components)/Last";
 import FAQs from "@/components/course-overview/faqs";
@@ -82,17 +82,17 @@ export default function CollegePartnership() {
         {...opportunitiesContent}
       />
 
+      {/* Why This Shift Matters Now */}
+      <WhyShiftMattersSection />
+
       {/* How Students Become Job-Ready */}
-      <SkillingJourney />
+      <HowStudentsReady />
 
-      {/* Student Outcomes */}
-      <StudentOutcomes />
+      {/* Clear Outcomes for Institutions */}
+      <InstitutionOutcomes />
 
-      {/* Upskill Domains */}
-      <UpskillDomains />
-
-      {/* Portfolio Section */}
-      <PortfolioSection />
+      {/* Partnership That Delivers Results */}
+      <PartnershipDelivers />
 
       {/* Testimonials */}
       <Testimonials />
