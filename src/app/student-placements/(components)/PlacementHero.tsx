@@ -11,7 +11,6 @@ interface PlacementHeroProps {
   };
   subheadline: string;
   ctaPrimary: string;
-  ctaSecondary?: string;
   onStartLearning: () => void;
 }
 
@@ -20,7 +19,6 @@ const PlacementHero: React.FC<PlacementHeroProps> = ({
   headline,
   subheadline,
   ctaPrimary,
-  ctaSecondary,
   onStartLearning
 }) => {
   return (

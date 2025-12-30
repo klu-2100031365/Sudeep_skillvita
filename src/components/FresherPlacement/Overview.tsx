@@ -34,7 +34,7 @@ export default function Overview() {
                 <Map className="w-6 h-6" />
               </div>
               <h4 className="font-bold text-white mb-2">Clear Path</h4>
-              <p className="text-sm text-zinc-500">Don't guess what to do. Follow a roadmap.</p>
+              <p className="text-sm text-zinc-500">Don&apos;t guess what to do. Follow a roadmap.</p>
             </motion.div>
             <motion.div variants={cardVariants} whileHover="hover" className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 h-full mt-8 group cursor-default shadow-lg">
               <div className="w-12 h-12 bg-zinc-800 text-[#22c55e] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#22c55e] group-hover:text-black transition-colors border border-zinc-700 group-hover:border-[#22c55e] shadow-[0_0_10px_rgba(0,0,0,0.5)]">
